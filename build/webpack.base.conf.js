@@ -23,6 +23,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
+    // 处理后缀名
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
