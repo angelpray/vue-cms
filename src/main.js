@@ -5,6 +5,8 @@ import Vue from 'vue'
 // 里面其实做的就是注册鄋的全局组件和给Vue.prototype挂载一些对象
 import MintUI from 'mint-ui'
 import Axios from 'axios'
+// 引入Moment库
+import Moment from 'moment'
 import router from './router'
 import App from './App.vue'
 // 引入mint-ui的CSS
@@ -18,12 +20,12 @@ import Installer from '@/plugins/installer'
 import OrderContent from './components/common/OrderContent.vue'
 import OrderItem from './components/common/OrderItem.vue'
 import NavBar from './components/common/NavBar.vue'
-
 Vue.component(OrderContent.name, OrderContent)
 Vue.component(OrderItem.name, OrderItem)
 Vue.component(NavBar.name, NavBar)
 Vue.config.productionTip = false
 
+Vue.filter('convertTime', (data, formatStr) => Moment(data).format(formatStr))
 // 安装mint-ui插件
 Vue.use(MintUI)
 Vue.use(Installer)

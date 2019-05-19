@@ -5,6 +5,7 @@ import Member from '@/components/Member/Member.vue'
 import Shopcart from '@/components/Shopcart/Shopcart.vue'
 import Search from '@/components/Search/Search.vue'
 import NewsList from '@/components/NewsList/NewsList.vue'
+import NewsDetail from '@/components/NewsDetail/NewsDetail.vue'
 
 Vue.use(Router)
 
@@ -29,5 +30,9 @@ export default new Router({
     path: '/news/list',
     name: 'NewsList',
     component: NewsList
+  }, {
+    path: '/news/detail/:id',
+    name: 'NewsDetail',
+    component: NewsDetail
   }]
 })
