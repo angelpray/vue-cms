@@ -5,14 +5,14 @@
         <img :src="item" alt="">
       </mt-swipe-item>
     </mt-swipe>
-    <div class="content">
-      <div class="item" v-for="item in iconImgs" :key="item.id">
+    <order-content>
+      <order-item v-for="item in iconImgs" :key="item.id">
         <router-link :to="item.route">
-          <img :src="item.imgUrl" alt="">
+          <img :src="item.imgUrl" alt="" class="item-img">
           <p>{{item.desc}}</p>
         </router-link>
-      </div>
-    </div>
+      </order-item>
+    </order-content>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
         "route": {"name": 'Home'}
       }, {
         "id": "0005",
-        "imgUrl": "../../static/img/find.png",
+        "imgUrl": "../../static/img/search.png",
         "desc": "搜索咨询",
         "route": {"name": 'Home'}
       }, {
@@ -84,23 +84,5 @@ export default {
 }
 .mint-swipe img {
   width: 100%;
-}
-.content {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-}
-.content .item{
-  flex: 1;
-  flex-basis: 33.33%;
-  max-width: 33.33%;
-  text-align: center;
-}
-.item img{
-  width: 50%;
-}
-.item a{
-  text-decoration: none;
 }
 </style>

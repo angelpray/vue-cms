@@ -14,7 +14,13 @@ import 'mint-ui/lib/style.css'
 import '../static/css/global.css'
 // 引入插件安装自己的插件安装器
 import Installer from '@/plugins/installer'
+// 注册全局组件
+import OrderContent from './components/common/OrderContent.vue'
+import OrderItem from './components/common/OrderItem.vue'
 
+console.log(OrderContent.name)
+Vue.component(OrderContent.name, OrderContent)
+Vue.component(OrderItem.name, OrderItem)
 Vue.config.productionTip = false
 
 // 安装mint-ui插件
