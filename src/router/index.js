@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Member from '@/components/Member/Member.vue'
 import Shopcart from '@/components/Shopcart/Shopcart.vue'
 import Search from '@/components/Search/Search.vue'
+import NewsList from '@/components/NewsList/NewsList.vue'
 
 Vue.use(Router)
 
@@ -24,5 +25,9 @@ export default new Router({
     path: '/search',
     name: 'Search',
     component: Search
+  }, {
+    path: '/news/list',
+    name: 'NewsList',
+    component: NewsList
   }]
 })

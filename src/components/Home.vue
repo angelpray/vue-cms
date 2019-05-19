@@ -30,7 +30,7 @@ export default {
         "id": "0001",
         "imgUrl": "../../static/img/news.png",
         "desc": "新闻资讯",
-        "route": {"name": 'Home'}
+        "route": {"name": 'NewsList'}
       }, {
         "id": "0002",
         "imgUrl": "../../static/img/picShare.png",
