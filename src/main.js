@@ -18,7 +18,6 @@ import Installer from '@/plugins/installer'
 import OrderContent from './components/common/OrderContent.vue'
 import OrderItem from './components/common/OrderItem.vue'
 
-console.log(OrderContent.name)
 Vue.component(OrderContent.name, OrderContent)
 Vue.component(OrderItem.name, OrderItem)
 Vue.config.productionTip = false

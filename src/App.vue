@@ -1,23 +1,23 @@
 <template>
   <div>
-    <mt-header title="固定在顶部"></mt-header>
+    <mt-header title="Vue-cms"></mt-header>
     <router-view />
     <mt-tabbar v-model="selected">
-      <mt-tab-item id="首页">
+      <mt-tab-item id="Home">
         <img slot="icon" src="../static/img/index.png">
         首页
       </mt-tab-item>
-      <mt-tab-item id="会员">
+      <mt-tab-item id="Member">
         <img slot="icon" src="../static/img/vip.png">
-        订单
+        会员
       </mt-tab-item>
-      <mt-tab-item id="购物车">
+      <mt-tab-item id="Shopcart">
         <img slot="icon" src="../static/img/shopcart.png">
-        发现
+        购物车
       </mt-tab-item>
-      <mt-tab-item id="查找">
+      <mt-tab-item id="Search">
         <img slot="icon" src="../static/img/find.png">
-        我的
+        搜索
       </mt-tab-item>
     </mt-tabbar>
   </div>
@@ -29,6 +29,15 @@
     data() {
       return {
         selected: ''
+      }
+    },
+    watch: {
+      // 不能使用箭头函数
+      selected: function(newV, oldV) {
+        this.$router.push({
+          name: newV,
+
+        })
       }
     }
   }

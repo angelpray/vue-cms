@@ -59,13 +59,14 @@ export default {
       }]
     }
   },
-  created() {
-    this.$axios.get('getlunbo')
-    .then(res => {
-      this.imgs = res.data.message;
-    })
-    .catch(err => console.log(err))
-  }
+  // 向服务器发送get请求，由于服务器没配置好，先注释
+  // created() {
+  //   this.$axios.get('getlunbo')
+  //   .then(res => {
+  //     this.imgs = res.data.message;
+  //   })
+  //   .catch(err => console.log(err))
+  // }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
