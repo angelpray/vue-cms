@@ -20,6 +20,7 @@ import Installer from '@/plugins/installer'
 import OrderContent from './components/common/OrderContent.vue'
 import OrderItem from './components/common/OrderItem.vue'
 import NavBar from './components/common/NavBar.vue'
+
 Vue.component(OrderContent.name, OrderContent)
 Vue.component(OrderItem.name, OrderItem)
 Vue.component(NavBar.name, NavBar)

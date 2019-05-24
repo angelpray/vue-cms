@@ -35,7 +35,7 @@ export default {
         "id": "0002",
         "imgUrl": "../../static/img/picShare.png",
         "desc": "图文分享",
-        "route": {"name": 'Home'}
+        "route": {"name": 'PhotoList', query: {categoryId: 0}}
       }, {
         "id": "0003",
         "imgUrl": "../../static/img/goodsShow.png",
